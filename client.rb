@@ -124,7 +124,7 @@ class LocalProxy
   end
 
   def listen
-    @proxy = TCPServer.new(@port)
+    @proxy = TCPServer.new("127.0.0.1", @port)
     LOGGER.info("Server is listening on #{@port}".bold)
   rescue StandardError
     LOGGER.fatal('Error starting the server, probably port is already in use!'.red)
