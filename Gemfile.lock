@@ -1,0 +1,29 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    colorize (1.1.0)
+    concurrent-ruby (1.2.2)
+    em-websocket (0.5.3)
+      eventmachine (>= 0.12.9)
+      http_parser.rb (~> 0)
+    eventmachine (1.2.7)
+    http_parser.rb (0.8.0)
+    rexml (3.2.6)
+    rubyzip (2.3.2)
+    selenium-webdriver (4.15.0)
+      rexml (~> 3.2, >= 3.2.5)
+      rubyzip (>= 1.2.2, < 3.0)
+      websocket (~> 1.0)
+    websocket (1.2.10)
+
+PLATFORMS
+  x86_64-linux
+
+DEPENDENCIES
+  colorize
+  concurrent-ruby
+  em-websocket
+  selenium-webdriver (~> 4.15)
+
+BUNDLED WITH
+   2.4.17
