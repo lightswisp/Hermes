@@ -1,12 +1,12 @@
 require 'faye/websocket'
 require 'eventmachine'
 
-EM.run {
-  ws = Faye::WebSocket::Client.new('wss://sdnet.lol', [], :tls => {
-  	 :verify_peer => false
-  })
+EM.run do
+  ws = Faye::WebSocket::Client.new('wss://sdnet.lol', [], tls: {
+                                     verify_peer: false
+                                   })
 
-  ws.on :open do |event|
+  ws.on :open do |_event|
     p [:open]
     ws.send('Hello, world!')
   end
@@ -19,4 +19,4 @@ EM.run {
     p [:close, event.code, event.reason]
     ws = nil
   end
-}
+end
